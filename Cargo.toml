@@ -1,0 +1,12 @@
+[package]
+name = "AOC2024"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "Day1"
+path = "src/code/day_1.rs"
+
+[lib]
+name = "utils"
+path = "src/lib/mod.rs"
