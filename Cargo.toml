@@ -7,6 +7,10 @@ edition = "2021"
 name = "Day1"
 path = "src/code/day_1.rs"
 
+[[bin]]
+name = "Day2"
+path = "src/code/day_2.rs"
+
 [lib]
 name = "utils"
 path = "src/lib/mod.rs"
