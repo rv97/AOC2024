@@ -11,6 +11,13 @@ path = "src/code/day_1.rs"
 name = "Day2"
 path = "src/code/day_2.rs"
 
+[[bin]]
+name = "Day3"
+path = "src/code/day_3.rs"
+
 [lib]
 name = "utils"
 path = "src/lib/mod.rs"
+
+[dependencies]
+regex = "1.11.1"
