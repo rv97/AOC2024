@@ -3,7 +3,7 @@ use std::collections::{BinaryHeap, HashMap};
 use utils::utils::read_lines;
 
 fn part_1() -> u32 {
-    let file_path = "src/assets/day_1_part_1.txt";
+    let file_path = "src/assets/day_1.txt";
     let mut local_vec1: Vec<i32> = vec![];
     let mut local_vec2: Vec<i32> = vec![];
     let mut heap1 = BinaryHeap::new();
@@ -31,7 +31,7 @@ fn part_1() -> u32 {
 }
 
 fn part_2() -> u32 {
-    let file_path = "src/assets/day_1_part_2.txt";
+    let file_path = "src/assets/day_1.txt";
     let contents = read_lines(file_path);
     let mut num1 = Vec::new();
     let mut frequency_map = HashMap::new();
