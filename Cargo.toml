@@ -19,6 +19,10 @@ path = "src/code/day_3.rs"
 name = "Day4"
 path = "src/code/day_4.rs"
 
+[[bin]]
+name = "Day5"
+path = "src/code/day_5.rs"
+
 [lib]
 name = "utils"
 path = "src/lib/mod.rs"
