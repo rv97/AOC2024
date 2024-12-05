@@ -140,3 +140,58 @@ fn main () {
     println!("Part 1: {}", part_1(&mat, &contents));
     println!("Part 2: {}", part_2(&mat));
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_part_1() {
+        let sample_contents = "\
+            MMMSXXMASM
+            MSAMXMSMSA
+            AMXSXMAAMM
+            MSAMASMSMX
+            XMASAMXAMM
+            XXAMMXXAMA
+            SMSMSASXSS
+            SAXAMASAAA
+            MAMMMXMMMM
+            MXMXAXMASX";
+        let lines: Vec<String> = sample_contents
+            .lines()
+            .map(|line| line.trim().to_string())
+            .collect();
+        let mut mat: Vec<Vec<char>> = Vec::new();
+        for line in &lines {
+            mat.push(line.chars().collect());
+        }
+        let result = part_1(&mat, &lines);
+        assert_eq!(result, 18);
+    }
+
+    #[test]
+    fn test_part_2() {
+        let sample_contents = "\
+            MMMSXXMASM
+            MSAMXMSMSA
+            AMXSXMAAMM
+            MSAMASMSMX
+            XMASAMXAMM
+            XXAMMXXAMA
+            SMSMSASXSS
+            SAXAMASAAA
+            MAMMMXMMMM
+            MXMXAXMASX";
+        let lines: Vec<String> = sample_contents
+            .lines()
+            .map(|line| line.trim().to_string())
+            .collect();
+        let mut mat: Vec<Vec<char>> = Vec::new();
+        for line in &lines {
+            mat.push(line.chars().collect());
+        }
+        let result = part_2(&mat);
+        assert_eq!(result, 9);
+    }
+}

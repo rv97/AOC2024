@@ -38,3 +38,22 @@ fn main() {
     println!("Part 2: {}", part_2(&input_string));
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_part_1() {
+        let sample_contents = "xmul(2,4)%&mul[3,7]!@^do_not_mul(5,5)+mul(32,64]then(mul(11,8)mul(8,5))";
+        let result = part_1(&sample_contents);
+        assert_eq!(result, 161);
+    }
+
+    #[test]
+    fn test_part_2() {
+        let sample_contents = "xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))";
+        let result = part_2(&sample_contents);
+        assert_eq!(result, 48);
+    }
+}
+

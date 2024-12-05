@@ -78,3 +78,42 @@ fn main() {
     println!("\nPart 2: {}", part_2(&contents));
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_part_1() {
+        let sample_contents = "\
+            7 6 4 2 1
+            1 2 7 8 9
+            9 7 6 2 1
+            1 3 2 4 5
+            8 6 4 4 1
+            1 3 6 7 9";
+        let lines: Vec<String> = sample_contents
+            .lines()
+            .map(|line| line.trim().to_string())
+            .collect();
+        let result = part_1(&lines);
+        assert_eq!(result, 2);
+    }
+
+    #[test]
+    fn test_part_2() {
+        let sample_contents = "\
+            7 6 4 2 1
+            1 2 7 8 9
+            9 7 6 2 1
+            1 3 2 4 5
+            8 6 4 4 1
+            1 3 6 7 9";
+        let lines: Vec<String> = sample_contents
+            .lines()
+            .map(|line| line.trim().to_string())
+            .collect();
+        let result = part_2(&lines);
+        assert_eq!(result, 4);
+    }
+}
+
